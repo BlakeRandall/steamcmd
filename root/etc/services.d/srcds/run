@@ -1,0 +1,2 @@
+#!/usr/bin/with-contenv bash
+exec s6-setuidgid user /app/srcds_run -autoupdate -steam_dir /opt/steamcmd/ -steamcmd_script /app/${STEAM_SCRIPT:-steamcmd.txt} ${SRCDS_OPTIONS:--game hl2mp +map dm_overwatch +maxplayers 8 -maxplayers 8} ${SRCDS_EXTRAS:-}
